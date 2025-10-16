@@ -10,10 +10,9 @@ export function initSorting(columns) {
         let order = null;
 
        if (action && action.name === 'sort') {
-    // вращаем состояние кнопки по карте переходов
     action.dataset.value = rotateSort[action.dataset.value];
 
-    // сохраняем текущее поле и направление
+
     field = action.dataset.field;
     order = action.dataset.value;
 
@@ -40,8 +39,8 @@ export function initSorting(columns) {
 
         }
 
-        if (!field || order === 'none') return data;     // без активной сортировки — без изменений
-return sortCollection([...data], field, order);  // с активной — новая коллекция
+        if (!field || order === 'none') return data;
+return sortCollection([...data], field, order);
 
     }
 }
