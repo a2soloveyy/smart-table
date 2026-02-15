@@ -26,7 +26,7 @@ export function initFiltering(elements) {
       const el = elements[key];
       if (!el) return;
       if (['INPUT', 'SELECT'].includes(el.tagName) && el.value) {
-        filter[`filter[${el.name}]`] = el.value; // date, customer, seller, totalFrom, totalTo
+        filter[`filter[${el.name}]`] = el.value;
       }
     });
 
